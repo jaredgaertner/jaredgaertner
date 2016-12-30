@@ -1,0 +1,6 @@
+<h1>{{ lineup.lineup_id }}</h1>
+<ul>
+{% for player in lineup.player_set.all %}
+    <li>{{ player.full_name }}</li>
+{% endfor %}
+</ul>

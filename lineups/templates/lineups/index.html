@@ -1,0 +1,9 @@
+{% if lineup_list %}
+    <ul>
+    {% for lineup in lineup_list %}
+        <li><a href="{% url 'lineups:detail' lineup.id %}">{{ lineup.centre1 }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No lineups are available.</p>
+{% endif %}
